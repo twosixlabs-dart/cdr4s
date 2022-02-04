@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CDR Document",
+  "type": "object",
+  "properties": {
+    "uri": {
+      "description": "The RDF subject URI for this CDR document",
+      "type": "string"
+    },
+    "source_uri": {
+      "description": "Relative path to the extracted source file",
+      "type": "string"
+    },
+    "document_id": {
+      "description": "Unique document ID based on the MD5 sum of the source file's contents",
+      "type": "string"
+    },
+    "timestamp": {
+      "description": "Timestamp from epoch when this CDR document was created",
+      "type": "integer"
+    },
+    "team": {
+      "description": "Team which generated this CDR",
+      "type": "string"
+    },
+    "content_type": {
+      "description": "Detected MIME type of the source file",
+      "type": "string"
+    },
+    "extracted_metadata": {
+      "description": "Metadata pertaining to the extracted source file",
+      "type": "object",
+      "properties": {
+        "CreationDate": {
+          "type": "integer"
+        },
+        "ModDate": {
+          "type": "integer"
+        },
+        "Author": {
+          "type": "string"
+        },
+        "Title": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "URL": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "Classification": {
+          "type": "string"
+        },
+        "Language": {
+          "type": "string"
+        },
+        "Pages": {
+          "type": "integer"
+        },
+        "Subject": {
+          "type": "string"
+        },
+        "Creator": {
+          "type": "string"
+        },
+        "Producer": {
+          "type": "string"
+        },
+        "patternProperties": {
+          "^.*$": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "extracted_ntriples": {
+      "description": "Reflection of the extracted_metadata in N-Triples format using the DataProvenance ODP",
+      "type": "string"
+    },
+    "extracted_text": {
+      "description": "Text extracted from the source document. TA1 offsets start at 0 here, beginning at the value of this field (after the opening double quote character)",
+      "type": "string"
+    },
+    "extracted_numeric": {
+      "description": "Numeric data extracted from a CSV/TSV or Excel document. Key names correlate to the sheet name with values matching the contents in TSV format.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "uri",
+    "source_uri",
+    "document_id",
+    "timestamp",
+    "team",
+    "content_type",
+    "extracted_metadata"
+  ]
+}
