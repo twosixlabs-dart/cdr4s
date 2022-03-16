@@ -40,7 +40,7 @@ scalacOptions in ThisBuild += "-target:jvm-1.8"
 
 sonatypeProfileName := "com.twosixlabs"
 inThisBuild(List(
-    organization := "com.twosixlabs.dart",
+    organization := organization.value,
     homepage := Some(url("https://github.com/twosixlabs-dart/cdr4s")),
     licenses := List("GNU-Affero-3.0" -> url("https://www.gnu.org/licenses/agpl-3.0.en.html")),
     developers := List(
