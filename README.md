@@ -1,7 +1,7 @@
 # DART Commons
 This is a set of common utilities and libraries that are used throughout the DART project.
 
-[![DART Cdr4s](https://github.com/twosixlabs-dart/dart-commons/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/twosixlabs-dart/dart-commons/actions/workflows/build-and-publish.yml)
+[![DART Cdr4s](https://github.com/twosixlabs-dart/cdr4s/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/twosixlabs-dart/cdr4s/actions/workflows/build-and-publish.yml)
 
 # Modules
 | Module Name      | Description                                                                                                                                               |
