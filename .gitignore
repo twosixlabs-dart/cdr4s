@@ -21,5 +21,6 @@ project/plugins/project/
 .worksheet
 *.iml
 .idea/*
+.bsp/*
 .idea
 .DS_Store
