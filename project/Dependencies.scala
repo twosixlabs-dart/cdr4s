@@ -6,7 +6,7 @@ object Dependencies {
     val logbackVersion = "1.1.7"
     val jacksonVersion = "2.9.9"
     val betterFilesVersion = "3.8.0"
-    val dartCommonsVersion = "3.0.296"
+    val dartCommonsVersion = "3.0.27"
     val jsonSchemaVersion = "1.5.1"
 
     val logging = Seq( "org.slf4j" % "slf4j-api" % slf4jVersion,

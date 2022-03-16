@@ -5,7 +5,6 @@ build
 out/*
 content/*
 bin/*
-project/
 *.class
 *.log
 .cache
@@ -16,10 +15,13 @@ target/
 lib_managed/
 src_managed/
 project/boot/
+project/target
+project/project/*
 project/plugins/project/
 .scala_dependencies
 .worksheet
 *.iml
 .idea/*
+.bsp/*
 .idea
 .DS_Store
